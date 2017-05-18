@@ -1,0 +1,16 @@
+{
+  "name": "loggester",
+  "version": "0.2.0",
+  "description": "Logging",
+  "main": "loggester.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Mike Datsko <mike@datsko.it>",
+  "license": "MIT"
+}

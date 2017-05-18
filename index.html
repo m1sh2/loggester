@@ -1,0 +1,15 @@
+<script src="loggester.js"></script>
+<script>
+var log = new loggester.logger('MyFunction');
+
+function MyFunction() {
+  log('constructor');
+}
+
+MyFunction.prototype.someMethod = function(arg) {
+  log('someMethod', arg);
+}
+
+var myFunction = new MyFunction();
+myFunction.someMethod(5);
+</script>
