@@ -11,6 +11,10 @@
   "keywords": [
     "log"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m1sh2/loggester.git"
+  },
   "author": "Mike Datsko <mike@datsko.it>",
   "license": "MIT"
 }
