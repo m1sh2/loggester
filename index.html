@@ -12,4 +12,17 @@ MyFunction.prototype.someMethod = function(arg) {
 
 var myFunction = new MyFunction();
 myFunction.someMethod(5);
+
+var log2 = new loggester.logger('MyModule', 20);
+
+function MyModule() {
+  log2('constructor');
+}
+
+MyModule.prototype.someMethod = function(arg) {
+  log2('someMethod', arg);
+}
+
+var MyModule = new MyModule();
+MyModule.someMethod(10);
 </script>

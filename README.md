@@ -46,7 +46,7 @@ MyModule: someMethod 5
 #### In the code:
 
 ```
-var log = new loggester.logger('MyModule');
+var log = new loggester.logger('MyFunction', 20);
 
 function MyFunction() {
   log('constructor');
@@ -58,13 +58,28 @@ MyFunction.prototype.someMethod = function(arg) {
 
 var myFunction = new MyFunction();
 myFunction.someMethod(5);
+
+var log2 = new loggester.logger('MyModule', 20);
+
+function MyModule() {
+  log('constructor');
+}
+
+MyModule.prototype.someMethod = function(arg) {
+  log('someMethod', arg);
+}
+
+var MyModule = new MyModule();
+MyModule.someMethod(10);
 ```
 
 #### In the console:
 
 ```
-MyFunction constructor
-MyFunction someMethod 5
+ MyFunction           constructor
+ MyFunction           someMethod 5
+ MyModule             constructor
+ MyModule             someMethod 10
 ```
 
 ### Production mode
