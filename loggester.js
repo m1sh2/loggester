@@ -14,8 +14,9 @@
   var isNode = typeof window === 'undefined';
 
   var loggester = {
-    logger: function(caller) {
+    logger: function(caller, len) {
       var self = this;
+      len = typeof len === 'undefined' ? 10 : len;
       caller = typeof caller === 'undefined' ? '' : caller;
 
       return function(message) {
@@ -23,7 +24,7 @@
           return false;
         }
 
-        for (var i = caller.length; i < 10; i++) {
+        for (var i = caller.length; i < len; i++) {
           caller += ' ';
         }
 
