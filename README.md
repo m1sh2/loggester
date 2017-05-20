@@ -62,11 +62,11 @@ myFunction.someMethod(5);
 var log2 = new loggester.logger('MyModule', 20);
 
 function MyModule() {
-  log('constructor');
+  log2('constructor');
 }
 
 MyModule.prototype.someMethod = function(arg) {
-  log('someMethod', arg);
+  log2('someMethod', arg);
 }
 
 var MyModule = new MyModule();
