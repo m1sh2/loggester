@@ -2,10 +2,27 @@
   "name": "loggester",
   "version": "0.2.4",
   "description": "Logging",
-  "main": "loggester.js",
+  "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "light-server": "^2.6.0",
+    "nodemon": "^1.18.9"
+  },
   "scripts": {
+    "build": "gulp",
+    "server": "light-server -s ./dist -p 7000",
+    "test:server": "nodemon ./src/test/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

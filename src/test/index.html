@@ -1,0 +1,46 @@
+<style>
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<h1>Open console &darr;</h1>
+
+<script src="../app/loggester.js"></script>
+<script>
+var log = loggester('SomeFunction');
+
+function SomeFunction() {
+  log('constructor');
+}
+
+SomeFunction.prototype.someMethod = function(arg) {
+  log('someMethod', arg);
+};
+
+var someFunction = new SomeFunction();
+someFunction.someMethod(5);
+
+var log2 = loggester('SomeModule', 20);
+
+function SomeModule() {
+  log2('constructor');
+}
+
+SomeModule.prototype.someMethod = function(arg) {
+  log2('someMethod', arg);
+};
+
+var someModule = new SomeModule();
+someModule.someMethod(10);
+</script>

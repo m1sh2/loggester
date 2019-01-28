@@ -1,7 +1,7 @@
 
 var test2 = require('./test2');
 
-var loggester = require('./loggester');
+var loggester = require('../app/loggester');
 var log = new loggester.logger('SOME MODULE');
 // loggester.isProd = true;
 
